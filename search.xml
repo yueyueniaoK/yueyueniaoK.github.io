@@ -13,7 +13,7 @@
     <title></title>
     <url>/2023/11/07/%E8%AE%BA%E6%96%87/</url>
     <content><![CDATA[<h2 id="基于深度学习的歌声分离算法研究"><a href="#基于深度学习的歌声分离算法研究" class="headerlink" title="基于深度学习的歌声分离算法研究"></a>基于深度学习的歌声分离算法研究</h2><p>浙江理工大学-倪欣-2022</p>
-<p><img src="C:\Users\kkkay\AppData\Roaming\Typora\typora-user-images\1696727824676.png" alt="1696727824676"></p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/19d8ac720445ce035afd7de88a3ad65f.png"></p>
 <p>传统歌声分离算法：</p>
 <p>1.非负矩阵分解（Non-negative Matrix Factorization, NMF）</p>
 <p>2.基于音高推理的方法</p>
