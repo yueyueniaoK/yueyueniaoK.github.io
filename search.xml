@@ -9,4 +9,17 @@
         <tag>hello</tag>
       </tags>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2023/11/07/%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<h2 id="基于深度学习的歌声分离算法研究"><a href="#基于深度学习的歌声分离算法研究" class="headerlink" title="基于深度学习的歌声分离算法研究"></a>基于深度学习的歌声分离算法研究</h2><p>浙江理工大学-倪欣-2022</p>
+<p><img src="C:\Users\kkkay\AppData\Roaming\Typora\typora-user-images\1696727824676.png" alt="1696727824676"></p>
+<p>传统歌声分离算法：</p>
+<p>1.非负矩阵分解（Non-negative Matrix Factorization, NMF）</p>
+<p>2.基于音高推理的方法</p>
+<p>3.基于伴奏重复性的方法</p>
+<p>基于深度学习的歌声分离算法：</p>
+<p>1.频域模型：将歌曲通过短时傅里叶变换(Short-time Fourier Transform,STFT)得到幅值谱图，将其输入到训练好神经网络得到人声和伴奏的幅值谱图，最后结合原歌曲的相位谱图，通过短时傅里叶逆变换（Inverse Short-time Fourier Transform,ISTFT)重构得到人声和伴奏的时域信号。</p>
+]]></content>
+  </entry>
 </search>
