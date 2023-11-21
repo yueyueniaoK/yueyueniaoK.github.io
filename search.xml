@@ -1,25 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hello blog</title>
-    <url>/2023/11/07/hello-blog/</url>
-    <content><![CDATA[<p>aaaaa<br>aaaa’a’a’a’asssss</p>
-]]></content>
+    <title>C++Primer-面对对象程序设计</title>
+    <url>/2023/11/08/CppPrimer-%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
       <tags>
-        <tag>hello</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计单链表</title>
+    <url>/2023/11/07/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E9%93%BE%E8%A1%A8-%E8%AE%BE%E8%AE%A1%E5%8D%95%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">LinkedNode</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> val;</span><br><span class="line">        LinkedNode *next;</span><br><span class="line">        <span class="built_in">LinkedNode</span>(<span class="type">int</span> val):<span class="built_in">val</span>(val),<span class="built_in">next</span>(<span class="literal">nullptr</span>)&#123;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">MyLinkedList</span>() &#123;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="built_in">LinkedNode</span>(<span class="number">0</span>);</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">    &#125;   </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(index &lt; <span class="number">0</span>||index &gt;= size)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        LinkedNode *p= head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(index--)   </span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> p-&gt;val;  </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addAtHead</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        LinkedNode *p = <span class="keyword">new</span> <span class="built_in">LinkedNode</span>(val);</span><br><span class="line">        p-&gt;next = head-&gt;next; </span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        LinkedNode *p = head;</span><br><span class="line">        <span class="keyword">while</span>(p-&gt;next!=<span class="literal">NULL</span>) </span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">        LinkedNode *r = <span class="keyword">new</span> <span class="built_in">LinkedNode</span>(val);</span><br><span class="line">        p-&gt;next = r;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(index&lt;<span class="number">0</span>||index&gt;size) <span class="keyword">return</span>;</span><br><span class="line">        LinkedNode *p = head,*r = <span class="keyword">new</span> <span class="built_in">LinkedNode</span>(val);</span><br><span class="line">        <span class="keyword">while</span>(index--)</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        r-&gt;next = p-&gt;next;</span><br><span class="line">        p-&gt;next = r;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteAtIndex</span><span class="params">(<span class="type">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(index&lt;<span class="number">0</span>||index&gt;=size) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            LinkedNode *p=head,*r = <span class="literal">NULL</span>;</span><br><span class="line">            <span class="keyword">while</span>(index--)</span><br><span class="line">                p=p-&gt;next;</span><br><span class="line">            r = p-&gt;next;</span><br><span class="line">            p-&gt;next = p-&gt;next-&gt;next;</span><br><span class="line">            size--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">        LinkedNode *head;</span><br><span class="line">        <span class="type">int</span> size;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyLinkedList object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyLinkedList* obj = new MyLinkedList();</span></span><br><span class="line"><span class="comment"> * int param_1 = obj-&gt;get(index);</span></span><br><span class="line"><span class="comment"> * obj-&gt;addAtHead(val);</span></span><br><span class="line"><span class="comment"> * obj-&gt;addAtTail(val);</span></span><br><span class="line"><span class="comment"> * obj-&gt;addAtIndex(index,val);</span></span><br><span class="line"><span class="comment"> * obj-&gt;deleteAtIndex(index);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
     <title></title>
-    <url>/2023/11/07/%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<h2 id="基于深度学习的歌声分离算法研究"><a href="#基于深度学习的歌声分离算法研究" class="headerlink" title="基于深度学习的歌声分离算法研究"></a>基于深度学习的歌声分离算法研究</h2><p>浙江理工大学-倪欣-2022</p>
-<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/19d8ac720445ce035afd7de88a3ad65f.png"></p>
-<p>传统歌声分离算法：</p>
-<p>1.非负矩阵分解（Non-negative Matrix Factorization, NMF）</p>
-<p>2.基于音高推理的方法</p>
-<p>3.基于伴奏重复性的方法</p>
-<p>基于深度学习的歌声分离算法：</p>
-<p>1.频域模型：将歌曲通过短时傅里叶变换(Short-time Fourier Transform,STFT)得到幅值谱图，将其输入到训练好神经网络得到人声和伴奏的幅值谱图，最后结合原歌曲的相位谱图，通过短时傅里叶逆变换（Inverse Short-time Fourier Transform,ISTFT)重构得到人声和伴奏的时域信号。</p>
-]]></content>
+    <url>/2023/11/21/C++%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>[TOC]</p>
+<h1 id="C-模板"><a href="#C-模板" class="headerlink" title="C++模板"></a>C++模板</h1><h2 id="1-模板定义"><a href="#1-模板定义" class="headerlink" title="1.模板定义"></a>1.模板定义</h2><h3 id="1-1函数模板定义"><a href="#1-1函数模板定义" class="headerlink" title="1.1函数模板定义"></a>1.1函数模板定义</h3><h5 id="1-1-1函数模板"><a href="#1-1-1函数模板" class="headerlink" title="1.1.1函数模板"></a>1.1.1函数模板</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> U&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>模板定义</strong>以关键字<strong>template</strong>开始，后面跟着一个<strong>模板参数列表（template parameter list</strong>），<strong>模板参数（template parameter）</strong>用逗号分隔开，用小于号**&lt;**和大于号**&gt;**包围起来。</p>
+<p><strong><font color = red>Note：模板参数列表不能为空</font></strong></p>
+<h5 id="1-1-2实例化函数模板"><a href="#1-1-2实例化函数模板" class="headerlink" title="1.1.2实例化函数模板"></a>1.1.2实例化函数模板</h5><p>当我们调用一个函数模板时，编译器会根据函数实参推断出模板实参，用推断出的模板参数为我们<strong>实例化（instantiate）</strong>一个特定版本的函数，编译器生成的版本通常被称为<strong>模板的实例（instantiation）</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//compare的函数模板</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当我们使用compare函数模板时</span></span><br><span class="line">cout&lt;&lt;<span class="built_in">compare</span>(<span class="number">1</span>,<span class="number">0</span>)&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编译器实例化compare的实例</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> <span class="type">int</span> &amp;v1,<span class="type">const</span> <span class="type">int</span> &amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-1-3模板类型参数和非模板类型参数"><a href="#1-1-3模板类型参数和非模板类型参数" class="headerlink" title="1.1.3模板类型参数和非模板类型参数"></a>1.1.3模板类型参数和非模板类型参数</h5><p>模板类型参数</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">class</span> <span class="title class_">U</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>模板类型参数前面必须使用关键字<strong>typename</strong>或者<strong>class</strong>，**模板类型参数（template parameter)**可以看作为类型说明符，像内置类型和类类型一样使用。</p>
+<p><font color = gree>非模板类型参数</font></p>
+<p><font color= gree>非模板类型参数可以是一个整型、指向对象或函数类型的指针或者引用，绑定到非类型整型参数必须是一个常量表达式，绑定到指针或引用非类型参数的实参必须具有静态的生存期,不能用一个普通的局部变量或动态对象作为指针或引用类型模板参数的实参。在需要常量表达式的地方，可以使用非类型参数，比如数组的大小</font></p>
+<p><font color  = red>Note：非模板类型参数必须是常量表达式</font></p>
+<p>函数模板可以声明<strong>inline</strong>和<strong>constexpr</strong>，放在模板参数列表之后，返回类型之前。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T &amp;v1,<span class="type">const</span> T &amp;v2)</span></span></span><br></pre></td></tr></table></figure>
+
+<h5 id="1-1-4尽量编写类型无关的代码"><a href="#1-1-4尽量编写类型无关的代码" class="headerlink" title="1.1.4尽量编写类型无关的代码"></a>1.1.4尽量编写类型无关的代码</h5><p>如上面compare函数例子，编写泛型编程代码的两个重要原则：</p>
+<ol>
+<li>模板中的函数参数是const的引用；（可以保证函数可以用不能拷贝的类型）</li>
+<li>函数体中的条件判断仅使用&lt;比较运算；（可以降低对要处理的类型的要求）</li>
+</ol>
+<p><font color = red>Best Practices:模板程序应该尽量减少对实参类型的要求</font></p>
+<p><img src="E:\image\Snipaste_2023-11-21_15-23-04模板编译.png" alt="Snipaste_2023-11-21_15-23-04模板编译"></p>
+<p><img src="E:\image\Snipaste_2023-11-21_15-24-05.png" alt="Snipaste_2023-11-21_15-24-05"></p>
+<p><img src="E:\image\Snipaste_2023-11-21_15-24-50.png" alt="Snipaste_2023-11-21_15-24-50"></p>
+<h3 id="1-2类模板定义"><a href="#1-2类模板定义" class="headerlink" title="1.2类模板定义"></a>1.2类模板定义</h3>]]></content>
   </entry>
 </search>
