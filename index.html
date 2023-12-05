@@ -84,7 +84,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
   </ul>
 </nav>
 
@@ -129,7 +129,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -165,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/21/CPP%E6%A8%A1%E6%9D%BF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE-%E6%9C%89%E5%BA%8F%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Crayon%20Shin-chan.jpg">
@@ -183,7 +183,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/21/CPP%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">CPP模板</a>
+          <a href="/2023/12/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE-%E6%9C%89%E5%BA%8F%E8%A1%A8/" class="post-title-link" itemprop="url">数据结构-查找-有序表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -195,7 +195,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-11-21 16:57:28 / 修改时间：17:01:14" itemprop="dateCreated datePublished" datetime="2023-11-21T16:57:28+08:00">2023-11-21</time>
+      <time title="创建时间：2023-12-04 23:16:03 / 修改时间：23:18:00" itemprop="dateCreated datePublished" datetime="2023-12-04T23:16:03+08:00">2023-12-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -203,7 +203,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">C++学习</span></a>
+          <a href="/categories/%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">大话数据结构</span></a>
         </span>
     </span>
 
@@ -217,33 +217,52 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-模板"><a href="#C-模板" class="headerlink" title="C++模板"></a>C++模板</h1><h2 id="1-模板定义"><a href="#1-模板定义" class="headerlink" title="1.模板定义"></a>1.模板定义</h2><h3 id="1-1函数模板定义"><a href="#1-1函数模板定义" class="headerlink" title="1.1函数模板定义"></a>1.1函数模板定义</h3><h5 id="1-1-1函数模板"><a href="#1-1-1函数模板" class="headerlink" title="1.1.1函数模板"></a>1.1.1函数模板</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> U&gt;</span><br></pre></td></tr></table></figure>
+          <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><p><strong>查找表（Search Table）</strong>是由同一类型的数据元素（或记录）构成的集合。</p>
+<p><strong>关键字（Key）</strong>是数据元素中某个数据项的值，又称为键值，用它可以标识一个数据元素。也可以标识一个记录的某个数据项（字段），称为关键码。若此关键字可以唯一地标识一个记录，则此关键字称为<strong>主关键字（Primary Key）</strong>；对于可以识别多个元素的关键字，称为<strong>次关键字（Secondary Key)。</strong></p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-12-04_18-38-21%20%E6%9F%A5%E6%89%BE.png" alt="img"></p>
+<p><strong>静态查找表（Static Search Table）</strong>：只作查找的查找表。</p>
+<p>（1）查询某个“特定的“数据元素是否在查找表中。</p>
+<p>（2）检索某个”特定的“数据元素和各种属性。</p>
+<p><strong>动态查找表（Dynamic Search Table）：</strong>在查找过程中同时插入查找表中不存在的数据元素，或者冲查找表中删除已经存在的某个数据元素。</p>
+<p>（1）查找时插入数据元素</p>
+<p>（2）查找时删除数据元素</p>
+<h3 id="顺序表查找"><a href="#顺序表查找" class="headerlink" title="顺序表查找"></a>顺序表查找</h3><p><strong>顺序查找（Sequential Search）</strong>又叫线性查找。</p>
+<p>基本思想：从表中第一个（或最后一个）记录开始，逐个进行记录的关键字和给定值比较，若某个记录的关键字和给定值相等，则查找成功。反之，查找失败。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//顺序表查找算法</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Sequential_Search</span><span class="params">(<span class="type">const</span> <span class="type">int</span> *array,<span class="type">const</span> <span class="type">int</span> size,<span class="type">const</span> <span class="type">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(array[i]==key)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//查找成功返回关键字下标，查找失败返回0</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>模板定义</strong>以关键字<strong>template</strong>开始，后面跟着一个<strong>模板参数列表（template parameter list</strong>），<strong>模板参数（template parameter）</strong>用逗号分隔开，用小于号**&lt;**和大于号**&gt;**包围起来。</p>
-<p><strong><font color = red>Note：模板参数列表不能为空</font></strong></p>
-<h5 id="1-1-2实例化函数模板"><a href="#1-1-2实例化函数模板" class="headerlink" title="1.1.2实例化函数模板"></a>1.1.2实例化函数模板</h5><p>当我们调用一个函数模板时，编译器会根据函数实参推断出模板实参，用推断出的模板参数为我们<strong>实例化（instantiate）</strong>一个特定版本的函数，编译器生成的版本通常被称为<strong>模板的实例（instantiation）</strong>。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//compare的函数模板</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当我们使用compare函数模板时</span></span><br><span class="line">cout&lt;&lt;<span class="built_in">compare</span>(<span class="number">1</span>,<span class="number">0</span>)&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编译器实例化compare的实例</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> <span class="type">int</span> &amp;v1,<span class="type">const</span> <span class="type">int</span> &amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>顺序表查找优化：在顺序表查找的基础上设置一个哨兵，因为上面的算法每次循环都需要判断是否越界，即i是否小于n作比较，设置哨兵，可以不需要每次比较。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Sequential_Search</span><span class="params">(<span class="type">const</span> <span class="type">int</span> *array,<span class="type">const</span> <span class="type">int</span> size,<span class="type">const</span> <span class="type">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    array[<span class="number">0</span>] =key;		<span class="comment">//将array[0]设置为哨兵</span></span><br><span class="line">    <span class="type">int</span> i = size;</span><br><span class="line">    <span class="keyword">while</span>(array[i]!=key)</span><br><span class="line">        i--;</span><br><span class="line">    <span class="keyword">return</span> i;		<span class="comment">//返回0则查找失败</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="1-1-3模板类型参数和非模板类型参数"><a href="#1-1-3模板类型参数和非模板类型参数" class="headerlink" title="1.1.3模板类型参数和非模板类型参数"></a>1.1.3模板类型参数和非模板类型参数</h5><p>模板类型参数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">class</span> <span class="title class_">U</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：</p>
+<p>查找成功：O(n)。最优只需要查找1次，最差需要查找n次，关键字在任何位置的概率相同，平均查找次数（n+1)&#x2F;2。</p>
+<p>查找失败：O(n)。需要查找n+1次。</p>
+<h3 id="有序表查找"><a href="#有序表查找" class="headerlink" title="有序表查找"></a>有序表查找</h3><h5 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a>折半查找</h5><p>**折半查找（Binary Search)**，又称为二分查找。线性表中的记录必须是关键码有序（通常从小到大有序），线性表必须是采用顺序存储。</p>
+<p>基本思想：在有序表中，取中间记录作为比较对象，若给定值与中间记录的关键字相等，则查找成功；若给定值小于中间记录的关键字，则在中间记录的左半区继续查找；若给定值大于中间记录的关键字，则在中间记录的右半区继续查找。不断重复上述过程，直到查找成功；或所有查找区域无记录，查找失败为止。</p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-12-04_19-49-52%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.png" alt="img"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Binary_Search</span><span class="params">(<span class="type">const</span> <span class="type">int</span> *array,<span class="type">const</span> <span class="type">int</span> size,<span class="type">const</span> <span class="type">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> left =<span class="number">1</span>,right = size;	<span class="comment">//定义left为记录首位，right为记录某位</span></span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = (left+right)/<span class="number">2</span>;		<span class="comment">//折半，定义mid记录中值</span></span><br><span class="line">        <span class="keyword">if</span>(key == array[mid])			<span class="comment">//若中值等于key则查找成功</span></span><br><span class="line">            <span class="keyword">return</span> mid;					</span><br><span class="line">        <span class="keyword">else</span>(key&lt;array[mid])			<span class="comment">//若key比中值小，则在左半区</span></span><br><span class="line">            right = mid - <span class="number">1</span>;			<span class="comment">//right调整到中值左边一位</span></span><br><span class="line">        <span class="keyword">else</span> 							<span class="comment">//若key比中值大，则在右半区</span></span><br><span class="line">            left= = mid +<span class="number">1</span>;				<span class="comment">//left调整到中值右边一位</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>模板类型参数前面必须使用关键字<strong>typename</strong>或者<strong>class</strong>，**模板类型参数（template parameter)**可以看作为类型说明符，像内置类型和类类型一样使用。</p>
-<p><font color = gree>非模板类型参数</font></p>
-<p><font color= gree>非模板类型参数可以是一个整型、指向对象或函数类型的指针或者引用，绑定到非类型整型参数必须是一个常量表达式，绑定到指针或引用非类型参数的实参必须具有静态的生存期,不能用一个普通的局部变量或动态对象作为指针或引用类型模板参数的实参。在需要常量表达式的地方，可以使用非类型参数，比如数组的大小</font></p>
-<p><font color  = red>Note：非模板类型参数必须是常量表达式</font></p>
-<p>函数模板可以声明<strong>inline</strong>和<strong>constexpr</strong>，放在模板参数列表之后，返回类型之前。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T &amp;v1,<span class="type">const</span> T &amp;v2)</span></span></span><br></pre></td></tr></table></figure>
+<p>算法复杂度:</p>
+<p>查找成功：O(logn)</p>
+<p>查找失败：O(logn)</p>
+<h5 id="插值查找"><a href="#插值查找" class="headerlink" title="插值查找"></a>插值查找</h5><p><strong>插值查找（Interpolation Search）</strong>是根据要查找的关键字key与查找表中最大最小记录的关键字比较后的查找方法。</p>
+<p>基本思想：和二分查找一样，不同的是不与中值比较，用插值的计算公式替代取中值。</p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-12-04_20-27-02%E6%8F%92%E5%80%BC%E6%9F%A5%E6%89%BE%E5%85%AC%E5%BC%8F.png" alt="img"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Binary_Search</span><span class="params">(<span class="type">const</span> <span class="type">int</span> *array,<span class="type">const</span> <span class="type">int</span> size,<span class="type">const</span> <span class="type">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> left =<span class="number">1</span>,right = size;	<span class="comment">//定义left为记录首位，right为记录某位</span></span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = low + (high-low)*(key -a[left])/(a[right]-					a[left]);		</span><br><span class="line">        <span class="keyword">if</span>(key == array[mid])			</span><br><span class="line">            <span class="keyword">return</span> mid;					</span><br><span class="line">        <span class="keyword">else</span>(key&lt;array[mid])			</span><br><span class="line">            right = mid - <span class="number">1</span>;			</span><br><span class="line">        <span class="keyword">else</span> 							</span><br><span class="line">            left= = mid +<span class="number">1</span>;				</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="1-1-4尽量编写类型无关的代码"><a href="#1-1-4尽量编写类型无关的代码" class="headerlink" title="1.1.4尽量编写类型无关的代码"></a>1.1.4尽量编写类型无关的代码</h5><p>如上面compare函数例子，编写泛型编程代码的两个重要原则：</p>
-<ol>
-<li>模板中的函数参数是const的引用；（可以保证函数可以用不能拷贝的类型）</li>
-<li>函数体中的条件判断仅使用&lt;比较运算；（可以降低对要处理的类型的要求）</li>
-</ol>
-<p><font color = red>Best Practices:模板程序应该尽量减少对实参类型的要求</font></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-23-04模板编译.png" alt="Snipaste_2023-11-21_15-23-04模板编译"></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-24-05.png" alt="Snipaste_2023-11-21_15-24-05"></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-24-50.png" alt="Snipaste_2023-11-21_15-24-50"></p>
-<h3 id="1-2类模板定义"><a href="#1-2类模板定义" class="headerlink" title="1.2类模板定义"></a>1.2类模板定义</h3>
+<p>算法复杂度也是O(logn)，<strong>但是对于表长比较大，关键字分布有比较均匀的查找表来说，插值查找算法的平均性能比折半查找好得多。</strong></p>
+<h5 id="斐波那契查找"><a href="#斐波那契查找" class="headerlink" title="斐波那契查找"></a>斐波那契查找</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造斐波那契数组</span></span><br><span class="line"><span class="type">void</span> Fibonacci（<span class="type">int</span> *f)</span><br><span class="line">&#123;</span><br><span class="line">    f[<span class="number">0</span>]= <span class="number">0</span>;</span><br><span class="line">    f[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    f[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">3</span>;i&lt;MAX_SIZE;i++)</span><br><span class="line">    &#123;</span><br><span class="line">    	f[i] = f[i<span class="number">-1</span>] + f[i<span class="number">-2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Fibonacci_Search</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* array,<span class="type">const</span> <span class="type">int</span> size,<span class="type">const</span> <span class="type">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> f[MAX_SIZE];</span><br><span class="line">    <span class="built_in">Fibonacci</span>(f);		<span class="comment">//构造一个Fibonacci数组</span></span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(f[k]<span class="number">-1</span>&lt;size)</span><br><span class="line">        k++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = size+<span class="number">1</span>;i&lt;f[k];i++)</span><br><span class="line">        array[i] = array[size];</span><br><span class="line">    <span class="type">int</span> low,high,mid;</span><br><span class="line">    low = <span class="number">1</span>;</span><br><span class="line">    high = size;</span><br><span class="line">    <span class="keyword">while</span>(low&lt;=high)</span><br><span class="line">    &#123;</span><br><span class="line">        mid = low +f[k<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">if</span>(array[mid]==key)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(mid&lt;=size)</span><br><span class="line">            	<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> size;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>(key&lt;array[mid])</span><br><span class="line">        &#123;</span><br><span class="line">            high = mid<span class="number">-1</span>;            </span><br><span class="line">            k--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            low = mid+<span class="number">1</span>;</span><br><span class="line">            k-=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>斐波那契查找算法的核心：</p>
+<p>（1）当key&#x3D;array[mid]时，查找成功；</p>
+<p>（2）当key&lt;array[mid]时，新范围是[low,mid-1],范围个数为f[k-1]-1;</p>
+<p>（3）当key&gt;array[mid]时，新范围是[mid+1,high],范围个数为f[k-2]-1;</p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-12-04_23-02-09%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%9F%A5%E6%89%BE.png" alt="img"></p>
+<p>斐波那契数组{1，1，2，3，5,…,f[n]},从第三个数开始，等于前两个数的和。</p>
+<p>F[n] &#x3D; F[n-1]+[n-2]</p>
+<p>斐波那契黄金分割，斐波那契数组的值越往后，f[n-1]&#x2F;f[n]比值越接近黄金分割比例约等于0.618。</p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-12-04_23-08-18%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91.png" alt="img"></p>
+<p>基本思想和二分查找一样，中值换成上面的公式。</p>
+
       
     </div>
 
@@ -269,7 +288,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/21/C++%E6%A8%A1%E6%9D%BF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/21/CPP%E6%A8%A1%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Crayon%20Shin-chan.jpg">
@@ -287,7 +306,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/21/C++%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">未命名</a>
+          <a href="/2023/11/21/CPP%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">C++模板</a>
         </h2>
 
         <div class="post-meta-container">
@@ -297,9 +316,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-11-21 16:42:00 / 修改时间：16:56:54" itemprop="dateCreated datePublished" datetime="2023-11-21T16:42:00+08:00">2023-11-21</time>
+      <time title="创建时间：2023-11-21 16:57:28" itemprop="dateCreated datePublished" datetime="2023-11-21T16:57:28+08:00">2023-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-04 23:14:40" itemprop="dateModified" datetime="2023-12-04T23:14:40+08:00">2023-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">C++学习</span></a>
+        </span>
     </span>
 
   
@@ -312,14 +346,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="C-模板"><a href="#C-模板" class="headerlink" title="C++模板"></a>C++模板</h1><h2 id="1-模板定义"><a href="#1-模板定义" class="headerlink" title="1.模板定义"></a>1.模板定义</h2><h3 id="1-1函数模板定义"><a href="#1-1函数模板定义" class="headerlink" title="1.1函数模板定义"></a>1.1函数模板定义</h3><h5 id="1-1-1函数模板"><a href="#1-1-1函数模板" class="headerlink" title="1.1.1函数模板"></a>1.1.1函数模板</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> U&gt;</span><br></pre></td></tr></table></figure>
+          <h2 id="模板定义"><a href="#模板定义" class="headerlink" title="模板定义"></a>模板定义</h2><h3 id="1函数模板定义"><a href="#1函数模板定义" class="headerlink" title="1函数模板定义"></a>1函数模板定义</h3><h5 id="1-1函数模板"><a href="#1-1函数模板" class="headerlink" title="1.1函数模板"></a>1.1函数模板</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> U&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>模板定义</strong>以关键字<strong>template</strong>开始，后面跟着一个<strong>模板参数列表（template parameter list</strong>），<strong>模板参数（template parameter）</strong>用逗号分隔开，用小于号**&lt;**和大于号**&gt;**包围起来。</p>
 <p><strong><font color = red>Note：模板参数列表不能为空</font></strong></p>
-<h5 id="1-1-2实例化函数模板"><a href="#1-1-2实例化函数模板" class="headerlink" title="1.1.2实例化函数模板"></a>1.1.2实例化函数模板</h5><p>当我们调用一个函数模板时，编译器会根据函数实参推断出模板实参，用推断出的模板参数为我们<strong>实例化（instantiate）</strong>一个特定版本的函数，编译器生成的版本通常被称为<strong>模板的实例（instantiation）</strong>。</p>
+<h5 id="1-2实例化函数模板"><a href="#1-2实例化函数模板" class="headerlink" title="1.2实例化函数模板"></a>1.2实例化函数模板</h5><p>当我们调用一个函数模板时，编译器会根据函数实参推断出模板实参，用推断出的模板参数为我们<strong>实例化（instantiate）</strong>一个特定版本的函数，编译器生成的版本通常被称为<strong>模板的实例（instantiation）</strong>。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//compare的函数模板</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当我们使用compare函数模板时</span></span><br><span class="line">cout&lt;&lt;<span class="built_in">compare</span>(<span class="number">1</span>,<span class="number">0</span>)&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编译器实例化compare的实例</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> <span class="type">int</span> &amp;v1,<span class="type">const</span> <span class="type">int</span> &amp;v2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v1 &lt; v2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(v2 &lt; v1) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="1-1-3模板类型参数和非模板类型参数"><a href="#1-1-3模板类型参数和非模板类型参数" class="headerlink" title="1.1.3模板类型参数和非模板类型参数"></a>1.1.3模板类型参数和非模板类型参数</h5><p>模板类型参数</p>
+<h5 id="1-3模板类型参数和非模板类型参数"><a href="#1-3模板类型参数和非模板类型参数" class="headerlink" title="1.3模板类型参数和非模板类型参数"></a>1.3模板类型参数和非模板类型参数</h5><p>模板类型参数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">class</span> <span class="title class_">U</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>模板类型参数前面必须使用关键字<strong>typename</strong>或者<strong>class</strong>，**模板类型参数（template parameter)**可以看作为类型说明符，像内置类型和类类型一样使用。</p>
@@ -329,16 +363,21 @@
 <p>函数模板可以声明<strong>inline</strong>和<strong>constexpr</strong>，放在模板参数列表之后，返回类型之前。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="type">int</span> <span class="title">compare</span><span class="params">(<span class="type">const</span> T &amp;v1,<span class="type">const</span> T &amp;v2)</span></span></span><br></pre></td></tr></table></figure>
 
-<h5 id="1-1-4尽量编写类型无关的代码"><a href="#1-1-4尽量编写类型无关的代码" class="headerlink" title="1.1.4尽量编写类型无关的代码"></a>1.1.4尽量编写类型无关的代码</h5><p>如上面compare函数例子，编写泛型编程代码的两个重要原则：</p>
+<h5 id="1-4尽量编写类型无关的代码"><a href="#1-4尽量编写类型无关的代码" class="headerlink" title="1.4尽量编写类型无关的代码"></a>1.4尽量编写类型无关的代码</h5><p>如上面compare函数例子，编写泛型编程代码的两个重要原则：</p>
 <ol>
 <li>模板中的函数参数是const的引用；（可以保证函数可以用不能拷贝的类型）</li>
 <li>函数体中的条件判断仅使用&lt;比较运算；（可以降低对要处理的类型的要求）</li>
 </ol>
 <p><font color = red>Best Practices:模板程序应该尽量减少对实参类型的要求</font></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-23-04模板编译.png" alt="Snipaste_2023-11-21_15-23-04模板编译"></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-24-05.png" alt="Snipaste_2023-11-21_15-24-05"></p>
-<p><img src="E:\image\Snipaste_2023-11-21_15-24-50.png" alt="Snipaste_2023-11-21_15-24-50"></p>
-<h3 id="1-2类模板定义"><a href="#1-2类模板定义" class="headerlink" title="1.2类模板定义"></a>1.2类模板定义</h3>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-11-21_15-23-04%E6%A8%A1%E6%9D%BF%E7%BC%96%E8%AF%91.png">)</p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-11-21_15-24-05.png" alt="img"></p>
+<p><img src="https://hexoimagebed.oss-cn-shanghai.aliyuncs.com/images/Snipaste_2023-11-21_15-24-50.png" alt="img"></p>
+<h3 id="2类模板定义"><a href="#2类模板定义" class="headerlink" title="2类模板定义"></a>2类模板定义</h3><h5 id="2-1类模板"><a href="#2-1类模板" class="headerlink" title="2.1类模板"></a>2.1类模板</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">类的定义</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Blob</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">typedef</span> T value_type:</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;T&gt;::size_type size_type;</span><br><span class="line">    <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">Blob</span>();</span><br><span class="line">    <span class="built_in">Blob</span>(std::initializer_list&lt;T&gt; il);</span><br><span class="line">    <span class="comment">//Blob中的元素数目</span></span><br><span class="line">    <span class="function">size_type <span class="title">size</span><span class="params">()</span> <span class="type">const</span> </span>&#123;<span class="keyword">return</span> data-&gt;<span class="built_in">size</span>();&#125;</span><br><span class="line">	<span class="function"><span class="type">bool</span>  <span class="title">empty</span><span class="params">()</span> <span class="type">const</span> </span>&#123;<span class="keyword">return</span> data-&gt;<span class="built_in">empty</span>();&#125;</span><br><span class="line">    <span class="comment">//添加和删除元素</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pysh_back</span><span class="params">(<span class="type">const</span> T &amp;t)</span> </span>&#123;data-&gt;<span class="built_in">push_back</span>(t);&#125;</span><br><span class="line">    <span class="comment">//移动版本</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(T &amp;&amp;t)</span> </span>&#123;data-&gt;<span class="built_in">push_back</span>(std::<span class="built_in">move</span>(t));</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pop_back</span><span class="params">()</span></span></span><br><span class="line"><span class="function">  	<span class="comment">//元素访问</span></span></span><br><span class="line"><span class="function">    T&amp; <span class="title">back</span><span class="params">()</span></span>;</span><br><span class="line">    T&amp; <span class="keyword">operator</span>[](size_type i);</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::shared_ptr&lt;std::vector&lt;T&gt;&gt; data;</span><br><span class="line">    <span class="comment">//若data[i]无效，则抛出msg</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">check</span><span class="params">(size_)</span></span></span><br><span class="line"><span class="function">        </span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><font color = red>size_type是string和vector类类型定义的类型，用来保存string和vector对象的长度，标准库类型将size_type定义为unsigned类型。</font></p>
+
       
     </div>
 
